@@ -1,7 +1,22 @@
-plugins { id("com.android.application"); id("org.jetbrains.kotlin.android"); id("org.jetbrains.kotlin.plugin.compose") }
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose")
+}
 
-android { namespace = "pk.lgsarcmun.hub"; compileSdk = 35
-    defaultConfig { applicationId = "pk.lgsarcmun.hub"; minSdk = 26; targetSdk = 35; versionCode = 1; versionName = "1.0" }
+android {
+    namespace = "pk.lgsarcmun.hub"
+    compileSdk = 35
+    defaultConfig {
+        applicationId = "pk.lgsarcmun.hub"
+        minSdk = 26
+        targetSdk = 35
+        versionCode = 2
+        versionName = "1.1"
+        buildConfigField("String", "SUPABASE_URL", "\"https://zebbprclxlqelitytcfi.supabase.co\"")
+        buildConfigField("String", "SUPABASE_KEY", "\"sb_publishable_Wd-XORO59DikIWxu2J6rnA_LfTWoxd7\"")
+    }
+    buildFeatures { compose = true; buildConfig = true }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = "17" }
 }
