@@ -11,8 +11,8 @@ android {
         applicationId = "pk.lgsarcmun.hub"
         minSdk = 26
         targetSdk = 35
-        versionCode = 3
-        versionName = "1.2"
+        versionCode = 4
+        versionName = "1.3"
         buildConfigField("String", "SUPABASE_URL", "\"https://zebbprclxlqelitytcfi.supabase.co\"")
         buildConfigField("String", "SUPABASE_KEY", "\"sb_publishable_Wd-XORO59DikIWxu2J6rnA_LfTWoxd7\"")
     }
@@ -36,6 +36,5 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
     implementation("io.github.jan-tennert.supabase:postgrest-kt:3.1.4")
     implementation("io.github.jan-tennert.supabase:auth-kt:3.1.4")
-    implementation("io.github.jan-tennert.supabase:serializer-kotlinx:3.1.4")
     implementation("io.ktor:ktor-client-android:3.0.3")
 }
